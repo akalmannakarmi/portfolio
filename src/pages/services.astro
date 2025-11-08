@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+---
+
+<BaseLayout title="Services | Akal" url="https://akal.com.np/services">
+  <section class="max-w-5xl mx-auto py-16 px-4 sm:px-8">
+    <h1 class="text-4xl font-heading text-pandaRed mb-6 text-center">Services</h1>
+    <p class="text-lg text-center text-pandaBrown mb-12 max-w-3xl mx-auto">
+      I build things that work — fast, simple, and dependable.
+      Whether it’s web apps, automation scripts, or deployments, I focus on
+      efficiency and smooth developer experiences.
+    </p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <ServiceCard
+        title="Full-Stack Web Development"
+        icon="💻"
+        description="Creating modern web apps using Django, FastAPI, and React with clean UI built on TailwindCSS." />
+
+      <ServiceCard
+        title="DevOps & Deployment"
+        icon="☁️"
+        description="Deploying projects efficiently with Cloudflare Pages, AWS, and Docker — focusing on performance and security." />
+
+      <ServiceCard
+        title="Automation & Scripting"
+        icon="⚙️"
+        description="Writing automation scripts with Python and Boto3 to simplify repetitive workflows and infrastructure setup." />
+
+      <ServiceCard
+        title="UI/UX & Design Systems"
+        icon="🎨"
+        description="Designing cohesive, responsive, and aesthetic interfaces powered by TailwindCSS and a red panda’s eye for detail." />
+
+      <ServiceCard
+        title="Linux Setup & Optimization"
+        icon="🐧"
+        description="Customizing Linux environments (Arch, Btrfs, Rice setups) for performance, style, and automation." />
+
+      <ServiceCard
+        title="Consulting & Code Review"
+        icon="🧠"
+        description="Helping teams or individuals refine codebases, improve deployments, or adopt lightweight stacks." />
+    </div>
+  </section>
+</BaseLayout>
+
