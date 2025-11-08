@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pandaRed: #B23A48;
+  --color-pandaBrown: #3B1C32;
+  --color-pandaCream: #E1A177;
+  --color-pandaLight: #F6EEE0;
+  --color-pandaAccent: #FCA311;
+
+  --font-heading: Poppins, sans-serif;
+  --font-body: Inter, sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
+img {
+  border-radius: 1rem;
+}
+
+h1, h2, h3 {
+  scroll-margin-top: 6rem; /* better anchor navigation */
+}
+
+h1 {
+  @apply font-heading text-4xl sm:text-5xl text-pandaRed;
+}
+
+h2 {
+  @apply font-heading text-3xl sm:text-4xl text-pandaRed;
+}
+
+p {
+  @apply leading-relaxed text-pandaBrown/90;
+}
+
