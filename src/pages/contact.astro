@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCard from "../components/ContactCard.astro";
+---
+
+<BaseLayout title="Contact | Akal" url="https://akal.com.np/contact">
+  <section class="max-w-3xl mx-auto py-16 px-4 sm:px-8 text-center">
+    <h1 class="text-4xl font-heading text-pandaRed mb-6">Let’s Connect 🐾</h1>
+
+    <p class="text-lg text-pandaBrown mb-8">
+      I’m always open to collaborations, interesting projects, or just chatting about tech, automation, or red pandas.
+    </p>
+
+    <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-6">
+      <ContactCard
+        title="Email"
+        icon="📧"
+        link="mailto:mail@akal.com.np"
+        label="Send me a message directly"
+      />
+      <ContactCard
+        title="GitHub"
+        icon="💻"
+        link="https://github.com/akalmannakarmi"
+        label="Check out my projects"
+      />
+      <ContactCard
+        title="LinkedIn"
+        icon="🔗"
+        link="https://linkedin.com/in/akalmannakarmi"
+        label="Connect professionally"
+      />
+      <ContactCard
+        title="Twitter / X"
+        icon="🐦"
+        link="https://twitter.com/akalnakarmi"
+        label="Follow my tech thoughts"
+      />
+    </div>
+
+    <div class="mt-12">
+      <p class="text-pandaBrown">
+        Prefer something old-school? <br />
+        Drop me a friendly <span class="font-heading text-pandaRed">email</span> — I reply faster than a red panda climbs trees 🦊🌿
+      </p>
+    </div>
+  </section>
+</BaseLayout>
