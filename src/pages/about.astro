@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SkillStars from "../components/SkillStars.astro";
+---
+
+<BaseLayout title="About | Akal" url="https://akal.com.np/about">
+  <section class="max-w-5xl mx-auto py-16 px-4 sm:px-8">
+    <h1 class="text-4xl font-heading text-pandaRed mb-6">🐾 About Me</h1>
+
+    <p class="text-lg mb-4">
+      Hey, I’m <span class="font-semibold text-pandaRed">Akal</span> — a full-stack developer who codes like a red panda:
+      curious, calm, and a little obsessed with efficiency. I love creating systems that are simple,
+      fast, and reliable — the kind that just work without unnecessary fluff.
+    </p>
+
+    <p class="text-lg mb-4">
+      My coding journey started back in school with <span class="font-semibold">QBASIC</span>, which first introduced me
+      to programming logic and sparked my curiosity. Not long after, I picked up
+      <span class="font-semibold">Python</span> and built a small Snake game — the first time I saw something I made
+      actually come alive on screen. That moment lit a spark that never went out — I went from Python scripts and Flask
+      experiments to full-blown <span class="font-semibold">Django</span> apps and <span class="font-semibold">Next.js</span> frontends.
+    </p>
+
+    <p class="text-lg mb-4">
+      I previously worked as a <span class="font-semibold">Django Developer</span> at
+      <span class="font-semibold">Prixa Technologies</span>, contributing to large-scale systems in HRM, finance, and
+      communication. It gave me real-world experience with <span class="font-semibold">scalable architectures</span>,
+      <span class="font-semibold">API design</span>, and <span class="font-semibold">frontend development</span> using
+      React and Next.js. It also taught me the value of writing maintainable code that can adapt and evolve with time.
+    </p>
+
+    <p class="text-lg mb-4">
+      After leaving Prixa, I took a break to focus on personal projects and self-learning — diving deep into
+      <span class="font-semibold">automation</span>, <span class="font-semibold">Boto3</span>,
+      <span class="font-semibold">Cloudflare</span>, and <span class="font-semibold">Linux customization</span>
+      (my Arch setup is my happy place 🐧). Lately, I’ve been building small tools, automating workflows, and exploring
+      low-level languages like <span class="font-semibold">Zig</span> and <span class="font-semibold">Rust</span>,
+      just to see how far I can push minimalism.
+    </p>
+
+    <p class="text-lg mb-8">
+      I believe good software should be <span class="font-semibold">lightweight, transparent, and honest</span> —
+      like a well-tuned instrument or, you know, a panda quietly balancing on a branch. That’s the energy I try to bring
+      into every project — calm, curious, and always improving.
+    </p>
+
+    <h2 class="text-3xl font-heading text-pandaRed mb-4">🧠 Core Skills</h2>
+    <div class="grid sm:grid-cols-2 gap-3 mb-10">
+      <SkillStars skill="Python 🐍" level={4} />
+      <SkillStars skill="Django / DRF" level={4} />
+      <SkillStars skill="FastAPI" level={4} />
+      <SkillStars skill="Flask" level={4} />
+      <SkillStars skill="React" level={3} />
+      <SkillStars skill="Next.js" level={3} />
+      <SkillStars skill="TailwindCSS" level={3} />
+      <SkillStars skill="Docker" level={4} />
+      <SkillStars skill="Cloudflare / AWS" level={4} />
+      <SkillStars skill="Linux / Arch / Btrfs" level={4} />
+      <SkillStars skill="Automation (Boto3, Shell)" level={4} />
+      <SkillStars skill="SQL & Databases" level={4} />
+    </div>
+
+    <h2 class="text-3xl font-heading text-pandaRed mb-4">⚙️ Other Tools & Interests</h2>
+    <div class="p-6 mb-10">
+      <ul class="list-disc list-inside space-y-2 text-lg">
+        <li>
+          Exploring low-level languages like <span class="font-semibold">Zig</span>, <span class="font-semibold">Rust</span>, and <span class="font-semibold">C/C++</span>.
+        </li>
+        <li>
+          Working with <span class="font-semibold">HTMX</span>, <span class="font-semibold">Nginx</span>, and building lightweight internal tools.
+        </li>
+        <li>
+          Refining Linux workflows, dotfiles, and minimal development setups.
+        </li>
+        <li>
+          Practicing automation, scripting, and DevOps tasks with <span class="font-semibold">GitHub Actions</span> and <span class="font-semibold">Docker Compose</span>.
+        </li>
+      </ul>
+    </div>
+
+    <h2 class="text-3xl font-heading text-pandaRed mb-4">🌿 Currently</h2>
+    <p class="text-lg">
+      I’m taking time to learn, build, and refine my setup — from coding tools to deployment pipelines.
+      No rush, no noise — just small steps toward cleaner, better systems.
+    </p>
+  </section>
+</BaseLayout>
+
