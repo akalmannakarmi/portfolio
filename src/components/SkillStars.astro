@@ -1,0 +1,12 @@
+---
+const { skill, level } = Astro.props;
+// level: number (1–5)
+const filled = Array(level).fill("★");
+const empty = Array(5 - level).fill("☆");
+---
+<div class="flex items-center justify-between w-full sm:w-80 bg-pandaCream/60 rounded-xl px-4 py-2 mb-2 shadow-sm">
+  <span class="font-medium text-pandaBrown">{skill}</span>
+  <span class="text-pandaRed text-lg tracking-wider">
+    {filled.join("")}{empty.join("")}
+  </span>
+</div>

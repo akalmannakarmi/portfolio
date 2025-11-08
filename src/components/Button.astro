@@ -1,0 +1,8 @@
+---
+const { href = "#", text = "Click Me", color = "pandaRed" } = Astro.props;
+---
+
+<a href={href}
+   class={`inline-block px-5 py-2 font-heading text-white rounded-full shadow-md bg-${color} hover:bg-pandaBrown hover:shadow-lg transition`}>
+  {text}
+</a>

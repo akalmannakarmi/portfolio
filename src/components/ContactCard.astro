@@ -1,0 +1,12 @@
+---
+const { title, icon, link, label } = Astro.props;
+---
+
+<a href={link} target="_blank" rel="noopener noreferrer"
+   class="flex items-center gap-3 bg-pandaCream/70 rounded-2xl px-5 py-3 shadow-md hover:shadow-xl hover:-translate-y-1 transition-transform duration-200 hover:bg-pandaCream">
+  <div class="text-2xl text-pandaRed">{icon}</div>
+  <div>
+    <p class="font-heading text-lg text-pandaBrown">{title}</p>
+    <p class="text-pandaBrown/80 text-sm">{label}</p>
+  </div>
+</a>

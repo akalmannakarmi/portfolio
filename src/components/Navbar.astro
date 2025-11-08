@@ -1,0 +1,40 @@
+<nav class="sticky top-0 z-50 bg-pandaLight/80 backdrop-blur-md shadow-sm">
+  <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+    <a href="/" class="text-3xl font-heading text-pandaRed hover:opacity-80 transition">🐾 Akal</a>
+
+    <ul class="hidden md:flex gap-8 text-pandaBrown font-medium">
+      <li><a href="/about" class="hover:text-pandaRed transition">About</a></li>
+      <li><a href="/services" class="hover:text-pandaRed transition">Services</a></li>
+      <li><a href="/projects" class="hover:text-pandaRed transition">Projects</a></li>
+      <li><a href="/devlog" class="hover:text-pandaRed transition">Devlog</a></li>
+      <li><a href="/contact" class="hover:text-pandaRed transition">Contact</a></li>
+    </ul>
+
+    <button id="menu-button"
+      class="md:hidden text-pandaRed text-3xl focus:outline-none"
+      aria-label="Toggle navigation menu"
+    >
+      ☰
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col gap-4 bg-pandaCream/90 px-6 py-4 text-center shadow-md">
+    <a href="/about" class="block py-2 hover:text-pandaRed transition">About</a>
+    <a href="/services" class="block py-2 hover:text-pandaRed transition">Services</a>
+    <a href="/projects" class="block py-2 hover:text-pandaRed transition">Projects</a>
+    <a href="/blog" class="block py-2 hover:text-pandaRed transition">Blog</a>
+    <a href="/contact" class="block py-2 hover:text-pandaRed transition">Contact</a>
+  </div>
+</nav>
+
+<script is:inline>
+  const button = document.getElementById('menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  button.addEventListener('click', () => {
+    const open = !menu.classList.contains('hidden');
+    menu.classList.toggle('hidden');
+    button.textContent = open ? '☰' : '✕';
+  });
+</script>
+
