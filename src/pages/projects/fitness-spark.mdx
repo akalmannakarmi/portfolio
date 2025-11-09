@@ -1,0 +1,38 @@
+---
+title: "Fitness Spark"
+tech: "FastAPI, MongoDB, React, Next.js"
+image: "/assets/fitness-spark.png"
+description: "A meal planning and recipe discovery web app built for my BCA 6th semester project."
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { image, description } = frontmatter;
+
+<BaseLayout title="Fitness Spark | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Fitness Spark</h1>
+    <p class="text-pandaBrown mb-6">
+      <strong>Fitness Spark</strong> is a full-stack web application where users can create personalized meal plans and explore a large collection of recipes.
+      It was developed as my <strong>BCA 6th semester</strong> project in collaboration with <a href="https://sanixport.netlify.app" target="_blank" class="text-pandaRed underline">Sanish Maharjan</a>.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      The app allows users to search for recipes, view nutritional details, and build meal plans tailored to their dietary preferences.
+      Recipes can be filtered and organized efficiently, providing a clean and intuitive user experience for health and fitness tracking.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      Built with <strong>FastAPI</strong> for the backend and <strong>MongoDB</strong> for data storage, the project uses <strong>React</strong> and <strong>Next.js</strong> for the frontend,
+      ensuring a fast and modern user interface with seamless page transitions.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      This project helped me gain deeper experience in full-stack web development, API design, and working with NoSQL databases. 
+      It also gave me hands-on experience in collaborative development and deployment of production-ready applications.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://fitness-spark.akal.com.np" target="_blank">Visit Fitness Spark</a>
+    </p>
+  </section>
+</BaseLayout>
