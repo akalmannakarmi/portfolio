@@ -1,0 +1,52 @@
+---
+title: "TingTing"
+tech: "Django, DRF, Celery, Redis, Next.js, React, TanStack Query"
+image: "/assets/tingting-logo.png"
+description: "A telemarketing platform using text-to-voice for Nepali language communication."
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { image, description } = frontmatter;
+
+<BaseLayout title="TingTing | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">TingTing</h1>
+    <p class="text-pandaBrown mb-6">
+      <strong>TingTing</strong> is a telemarketing application that uses text-to-voice technology for communication in low-resource languages, focusing on <strong>Nepali</strong>. 
+      The platform enables automated SMS and voice campaigns powered by text-to-speech AI, supporting businesses in customer outreach and engagement.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      I contributed as a <strong>Django Developer</strong> (with full-stack involvement) in a team consisting of a senior full-stack developer, a mid-level Django developer, 
+      one Django trainee, and a React frontend developer. My responsibilities included integrating payment systems like <strong>Khalti</strong> and <strong>eSewa</strong> 
+      with a credit-based billing system for both SMS and phone services, implementing campaign report generation, and designing a custom text editor using <strong>Draft.js</strong> 
+      for seamless translation and tag management.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      I also implemented an auditing system to track all user actions, migrated data from the old TingTing version, and optimized call callback processing — 
+      reducing CPU usage from 100% to around 20%, enabling far more concurrent calls.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      Beyond the main system, I developed a standalone <strong>Python package</strong> to interact with the TingTing API, allowing developers and external systems 
+      to programmatically send messages, manage campaigns, and retrieve reports with ease. This modular approach improved maintainability and simplified API integration for future projects.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      Built with <strong>Django REST Framework</strong>, <strong>Celery</strong>, <strong>Redis</strong>, and <strong>PostgreSQL</strong> on the backend, 
+      and <strong>Next.js</strong>, <strong>React</strong>, and <strong>TanStack Query</strong> on the frontend, TingTing represents a high-performance, 
+      large-scale communication platform built for automation and reliability.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      This was my most extensive project at Prixa, where I learned to work effectively within a large, structured team, 
+      collaborate closely with senior engineers, and contribute meaningfully across multiple layers of a complex software system.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://www.tingting.io" target="_blank">Visit TingTing</a>
+    </p>
+  </section>
+</BaseLayout>
+
