@@ -1,0 +1,33 @@
+---
+title: "ThirdFactor"
+tech: "Django, Templates, Chart.js"
+image: "/assets/thirdfactor.png"
+description: "A dashboard for visualizing KYC verification data for Khalti users."
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { image, description } = frontmatter;
+
+<BaseLayout title="ThirdFactor | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">ThirdFactor</h1>
+    <p class="text-pandaBrown mb-6">
+      <strong>ThirdFactor</strong> is a dashboard application built for analyzing and visualizing KYC verification data for over 100,000 Khalti users. 
+      It provides detailed insights into the verification process through charts and breakdowns by status, helping operators monitor and improve verification efficiency.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      Developed with <strong>Django templating</strong> and <strong>Chart.js</strong>, the system aggregates KYC data and presents it through interactive graphs and dynamic filters 
+      such as date ranges, search functionality, and detailed record views.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      I contributed to building the dashboard views and chart visualizations, implementing optimized database queries to handle large datasets efficiently. 
+      The project was developed in collaboration with one frontend developer and one mid-level Django developer, with me serving as the Django developer responsible for backend logic and data presentation.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      Working on ThirdFactor helped me understand database query optimization, data aggregation for analytics, and the importance of handling memory and performance constraints when dealing with high-volume data.
+    </p>
+  </section>
+</BaseLayout>
