@@ -1,0 +1,37 @@
+---
+title: "Pomelo HRM"
+tech: "Django, DRF, Celery, Redis, PostgreSQL, Flutter"
+image: "/assets/pomelo.png"
+description: "A multi-tenant HR management system for employee data, attendance, and leave tracking."
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { image, description } = frontmatter;
+
+<BaseLayout title="Pomelo HRM | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Pomelo HRM</h1>
+    <p class="text-pandaBrown mb-6">
+      <strong>Pomelo HRM</strong> by Prixa Technologies is a comprehensive human resource management platform designed for businesses of all sizes. 
+      It supports multi-tenant architecture and provides a wide range of HR features including employee profile management, leave requests, and performance tracking.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      The system includes modules for attendance records, upcoming birthday reminders, and company announcements — helping organizations streamline their HR operations efficiently.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      Built using <strong>Django</strong> with <strong>Django REST Framework</strong> for APIs, <strong>Celery</strong> and <strong>Redis</strong> for task management, 
+      and <strong>PostgreSQL</strong> for database handling. The mobile version of Pomelo HRM was developed using <strong>Flutter</strong>.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      I contributed to maintaining the existing system, debugging legacy issues, and improving overall platform stability. 
+      This project gave me valuable experience working with large-scale multi-tenant systems and learning how enterprise-level HR tools are maintained and evolved over time.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://pomelo.prixa.net/pomelo/welcome" target="_blank">Visit Pomelo HRM</a>
+    </p>
+  </section>
+</BaseLayout>
