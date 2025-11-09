@@ -1,0 +1,35 @@
+---
+title: "Cody"
+tech: "Flask, JSON"
+image: "/assets/cody.png"
+description: "A computer science-themed Jeopardy-style quiz game."
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { image, description } = frontmatter;
+
+<BaseLayout title="Cody | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Cody</h1>
+    <p class="text-pandaBrown mb-6">
+      Cody is a fun quiz game based on Jeopardy, but focused on computer science questions.
+      Players answer questions from 5 categories with varying difficulty levels.
+    </p>
+
+    <ul class="list-disc list-inside text-pandaBrown/90 mb-6">
+      <li>🎮 Simple Jeopardy-style quiz game with 5 categories</li>
+      <li>⚡ Scoring system: points awarded/deducted based on correctness</li>
+      <li>👥 Multiplayer support: first to answer gets the question points</li>
+      <li>🗂️ Questions stored in JSON format for easy updates</li>
+      <li>➡️ Players select the next question after answering</li>
+    </ul>
+
+    <p class="text-pandaBrown">
+      This was a fun project to explore web development using Flask and storing dynamic data in JSON.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://cody.akal.com.np" target="_blank">Play Cody</a>
+    </p>
+  </section>
+</BaseLayout>
