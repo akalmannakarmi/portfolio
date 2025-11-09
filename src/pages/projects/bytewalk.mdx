@@ -1,0 +1,33 @@
+---
+title: "Bytewalk"
+tech: "Django, Templates, CKEditor, Postgres"
+image: "/assets/bytewalk.png"
+description: "A CMS website built for a software studio, crafted with Django templates and CKEditor."
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { image, description } = frontmatter;
+
+<BaseLayout title="Bytewalk | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Bytewalk</h1>
+    <p class="text-pandaBrown mb-6">
+      Bytewalk is a CMS website developed for a software studio with a team of 10+ technologists dedicated to transforming businesses through technology. 
+      The platform was built using Django Templates and CKEditor for easy content management and customization.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      I contributed to creating and customizing various sections of the site and implementing content toggling functionalities. 
+      This project was built collaboratively with a team of two interns, one mid-level Django developer, and one frontend developer.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      Working on Bytewalk was my first professional project at Prixa. I learned how CMS systems are structured, how Django works in real-world projects, 
+      and the importance of teamwork and task division in collaborative development.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://bytewalk.prixa.net" target="_blank">Visit Bytewalk</a>
+    </p>
+  </section>
+</BaseLayout>
