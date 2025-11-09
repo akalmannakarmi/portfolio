@@ -1,0 +1,34 @@
+---
+title: "Sosec HRM"
+tech: "Django, DRF, PostgreSQL, Flutter"
+image: "/assets/sosec-logo.png"
+description: "An extended HRM platform for SOSEC Nepal with added modules like Travel and Timesheets."
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { image, description } = frontmatter;
+
+<BaseLayout title="Sosec HRM | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Sosec HRM</h1>
+    <p class="text-pandaBrown mb-6">
+      <strong>Sosec HRM</strong> is a customized fork of Pomelo HRM, developed for <strong>SOSEC Nepal</strong> to address their specific organizational needs.
+      It extends the core HRM functionalities with additional modules like travel management, timesheets, and enhanced leave and recommendation workflows.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      Built with <strong>Django Templates</strong> and <strong>Django REST Framework</strong> on the backend, using <strong>PostgreSQL</strong> for database management, 
+      and <strong>Flutter</strong> for the mobile application, Sosec HRM provides a robust system for managing staff activities and approvals efficiently.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      I contributed to maintaining the system and implementing new features such as the leave and travel recommendation logic, recommender-approver workflows, 
+      and timesheet management. The project was developed collaboratively with one intern, with me leading as the Django developer in charge.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      This project taught me how to take ownership of development responsibilities, lead a small team, and mentor interns while enhancing my understanding 
+      of enterprise-level HRM systems and workflow automation.
+    </p>
+  </section>
+</BaseLayout>
