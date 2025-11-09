@@ -1,0 +1,37 @@
+---
+title: "L-Spark Fire and Safety"
+tech: "Django, Templates, PostgreSQL"
+image: "/assets/lspark.png"
+description: "A CMS-driven corporate site for a fire protection and safety solutions company."
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { image, description } = frontmatter;
+
+<BaseLayout title="L-Spark Fire and Safety | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">L-Spark Fire and Safety</h1>
+    <p class="text-pandaBrown mb-6">
+      <strong>L-Spark Fire and Safety</strong> is a corporate website built to provide comprehensive information about the company’s fire protection and safety services. 
+      The platform highlights the company’s expertise in fire equipment installation, fire safety management, emergency evacuation planning, and training programs.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      Developed using <strong>Django Templates</strong> and <strong>PostgreSQL</strong>, the system enables dynamic content management for sections like Vision, Mission, and Service details, 
+      ensuring an easily maintainable and scalable site for the client.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      I contributed as a <strong>Django trainee</strong>, collaborating with three mid-level Django developers and one other trainee. 
+      My primary role involved refining templates and implementing layout fixes to maintain visual consistency and responsiveness across pages.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      Working on L-Spark helped me understand production-level Django template workflows, collaborative development practices, and how small design improvements can enhance user experience on professional CMS platforms.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://www.lspark.com.au" target="_blank">Visit L-Spark Fire and Safety</a>
+    </p>
+  </section>
+</BaseLayout>
