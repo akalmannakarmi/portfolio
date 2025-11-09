@@ -1,0 +1,36 @@
+---
+title: "Nepal Chamber of Commerce"
+tech: "Django, Templates, PostgreSQL, CKEditor"
+image: "/assets/chamber.png"
+description: "A CMS platform for managing chambers, executives, and member organizations."
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { image, description } = frontmatter;
+
+<BaseLayout title="Nepal Chamber of Commerce | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Nepal Chamber of Commerce</h1>
+    <p class="text-pandaBrown mb-6">
+      The Nepal Chamber of Commerce (NCC), established in 1952 (2007 BS), is the first Chamber of Commerce in Nepal with over 1,600 ordinary members and 8,000 registered firms.
+      The website serves as a comprehensive CMS platform allowing administrators to manage chambers, committees, executives, and members.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      Built using Django templating, PostgreSQL, and CKEditor, the system provides dynamic content management capabilities for key sections like the President’s Message, Executives, Committees, and Membership details.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      I contributed to implementing many of the CMS features, helping structure and customize core functionalities for content management. 
+      This project was developed collaboratively with a team of two interns, two mid-level Django developers, and one frontend developer, while I was serving as a Django intern.
+    </p>
+
+    <p class="text-pandaBrown mb-6">
+      Working on the Nepal Chamber of Commerce website helped me gain a deeper understanding of Django’s core features, CMS development, and the collaborative process in real-world production environments.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://ncc.org.np" target="_blank">Visit NCC Website</a>
+    </p>
+  </section>
+</BaseLayout>
