@@ -1,15 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from 'astro:assets';
+import mascot from "../../public/assets/redpanda-mascot.png"
 ---
+
 <BaseLayout title="Home | Akal Man Nakarmi Portfolio">
   <section class="max-w-5xl text-center mx-auto py-16 px-4 sm:px-8">
-    <div class="mx-auto w-64 mb-6 aspect-square relative overflow-hidden rounded-2xl">
-      <img
-        src="/assets/redpanda-mascot.png"
+    <div class="mx-auto mb-6 aspect-square relative overflow-hidden rounded-2xl w-40 sm:w-56 lg:w-64">
+      <Image
+        src={mascot}
         alt="Red panda mascot"
-        loading="lazy"
-        width="256"
-        height="256"
+        widths={[160, 224, 256, 320, 400]}
+        sizes="(max-width: 640px) 160px, (max-width: 1024px) 224px, 256px"
+        format="webp"
+        loading="eager"
+        decoding="sync"
         class="absolute inset-0 w-full h-full object-contain transition-opacity duration-500 opacity-0"
         onload="this.style.opacity='1'"
       />
@@ -21,4 +26,3 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
   </section>
 </BaseLayout>
-

@@ -1,6 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import fitnessSpark from "../../public/assets/fitness-spark.png";
+import cody from "../../public/assets/cody.png"
+import bytewalk from "../../public/assets/bytewalk.png"
+import chamber from "../../public/assets/chamber.png"
+import lease from "../../public/assets/lease-logo.png"
+import lspark from "../../public/assets/lspark.png"
+import pomelo from "../../public/assets/pomelo.png"
+import sosec from "../../public/assets/sosec-logo.png"
+import thirdfactor from "../../public/assets/thirdfactor.png"
+import tingting from "../../public/assets/tingting-logo.png"
 ---
 
 <BaseLayout title="Projects | Akal Man Nakarmi" url="https://akal.com.np/projects" description="A curated collection of my web development work, featuring full-stack applications, automation tools, dashboards, and CMS platforms built with Django, FastAPI, React, Flutter, PostgreSQL, and more. Explore personal projects and real-world solutions I’ve designed and developed.">
@@ -16,14 +26,14 @@ import ProjectCard from "../components/ProjectCard.astro";
         title="Fitness Spark"
         tech="FastAPI, MongoDB, React, Next.js"
         description="A meal planning and recipe discovery web app built for my BCA 6th semester project."
-        image="/assets/fitness-spark.png"
+        image={fitnessSpark}
         link="/projects/fitness-spark"
       />
       <ProjectCard
         title="Cody"
         tech="Flask, JSON"
         description="A computer science-themed Jeopardy-style quiz game."
-        image="/assets/cody.png"
+        image={cody}
         link="/projects/cody"
       />
       <!-- Add more personal projects here -->
@@ -36,56 +46,56 @@ import ProjectCard from "../components/ProjectCard.astro";
         title="TingTing"
         tech="Django, DRF, Celery, Redis, Next.js, React, TanStack Query"
         description="A telemarketing platform using text-to-voice for Nepali language communication."
-        image="/assets/tingting-logo.png"
+        image={tingting}
         link="/projects/tingting"
       />
       <ProjectCard
         title="ThirdFactor"
         tech="Django, Templates, Chart.js"
         description="A dashboard for visualizing KYC verification data for Khalti users."
-        image="/assets/thirdfactor.png"
+        image={thirdfactor}
         link="/projects/thirdfactor"
       />
       <ProjectCard
         title="Sosec HRM"
         tech="Django, DRF, PostgreSQL, Flutter"
         description="An extended HRM platform for SOSEC Nepal with added modules like Travel and Timesheets."
-        image="/assets/sosec-logo.png"
+        image={sosec}
         link="/projects/sosec-hrm"
       />
       <ProjectCard
         title="Pomelo HRM"
         tech="Django, DRF, Celery, Redis, PostgreSQL, Flutter"
         description="A multi-tenant HR management system for employee data, attendance, and leave tracking."
-        image="/assets/pomelo.png"
+        image={pomelo}
         link="/projects/pomelo-hrm"
       />
       <ProjectCard
         title="Lease Management"
         tech="Django REST Framework, PostgreSQL, Oracle"
         description="A lease and accounting management API built for Karmachari Sanchaya Kosh (EPF)."
-        image="/assets/lease-logo.png"
+        image={lease}
         link="/projects/lease-management"
       />
       <ProjectCard
         title="Nepal Chamber of Commerce"
         tech="Django, Templates, PostgreSQL, CKEditor"
         description="A CMS platform for managing chambers, executives, and member organizations."
-        image="/assets/chamber.png"
+        image={chamber}
         link="/projects/nepal-chamber"
       />
       <ProjectCard
         title="Bytewalk"
         tech="Django, Templates, CKEditor, Postgres"
         description="A CMS website built for a software studio, crafted with Django templates, CKEditor and Postgres"
-        image="/assets/bytewalk.png"
+        image={bytewalk}
         link="/projects/bytewalk"
       />
       <ProjectCard
         title="L-Spark Fire and Safety"
         tech="Django, Templates, PostgreSQL"
         description="A CMS-driven corporate site for a fire protection and safety solutions company."
-        image="/assets/lspark.png"
+        image={lspark}
         link="/projects/l-spark"
       />
     </div>
