@@ -1,12 +1,16 @@
 ---
 title: "Nepal Chamber of Commerce"
 tech: "Django, Templates, PostgreSQL, CKEditor"
-image: "/assets/chamber.png"
 description: "A CMS platform for managing chambers, executives, and member organizations."
+category: "prixa"
+order: 3 
 ---
 
+import image from "../../../public/assets/chamber.png";
+export { image };
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
-export const { image, description } = frontmatter;
+export const { description } = frontmatter;
 
 <BaseLayout title="Nepal Chamber of Commerce | Projects" image={image} description={description}>
   <section class="max-w-3xl mx-auto py-12">

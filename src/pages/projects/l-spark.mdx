@@ -1,12 +1,16 @@
 ---
 title: "L-Spark Fire and Safety"
 tech: "Django, Templates, PostgreSQL"
-image: "/assets/lspark.png"
 description: "A CMS-driven corporate site for a fire protection and safety solutions company."
+category: "prixa"
+order: 1 
 ---
 
+import image from "../../../public/assets/lspark.png";
+export { image };
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
-export const { image, description } = frontmatter;
+export const { description } = frontmatter;
 
 <BaseLayout title="L-Spark Fire and Safety | Projects" image={image} description={description}>
   <section class="max-w-3xl mx-auto py-12">

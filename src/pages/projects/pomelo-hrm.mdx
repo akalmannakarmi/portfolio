@@ -1,12 +1,16 @@
 ---
 title: "Pomelo HRM"
 tech: "Django, DRF, Celery, Redis, PostgreSQL, Flutter"
-image: "/assets/pomelo.png"
 description: "A multi-tenant HR management system for employee data, attendance, and leave tracking."
+category: "prixa"
+order: 6 
 ---
 
+import image from "../../../public/assets/pomelo.png";
+export { image };
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
-export const { image, description } = frontmatter;
+export const { description } = frontmatter;
 
 <BaseLayout title="Pomelo HRM | Projects" image={image} description={description}>
   <section class="max-w-3xl mx-auto py-12">

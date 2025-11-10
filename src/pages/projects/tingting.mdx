@@ -1,12 +1,16 @@
 ---
 title: "TingTing"
 tech: "Django, DRF, Celery, Redis, Next.js, React, TanStack Query"
-image: "/assets/tingting-logo.png"
 description: "A telemarketing platform using text-to-voice for Nepali language communication."
+category: "prixa"
+order: 8 
 ---
 
+import image from "../../../public/assets/tingting-logo.png";
+export { image };
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
-export const { image, description } = frontmatter;
+export const { description } = frontmatter;
 
 <BaseLayout title="TingTing | Projects" image={image} description={description}>
   <section class="max-w-3xl mx-auto py-12">

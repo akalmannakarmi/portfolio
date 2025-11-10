@@ -1,12 +1,16 @@
 ---
 title: "ThirdFactor"
 tech: "Django, Templates, Chart.js"
-image: "/assets/thirdfactor.png"
 description: "A dashboard for visualizing KYC verification data for Khalti users."
+category: "prixa"
+order: 5 
 ---
 
+import image from "../../../public/assets/thirdfactor.png";
+export { image };
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
-export const { image, description } = frontmatter;
+export const { description } = frontmatter;
 
 <BaseLayout title="ThirdFactor | Projects" image={image} description={description}>
   <section class="max-w-3xl mx-auto py-12">

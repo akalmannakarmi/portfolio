@@ -1,12 +1,16 @@
 ---
 title: "Lease Management"
 tech: "Django REST Framework, PostgreSQL, Oracle"
-image: "/assets/lease-logo.png"
 description: "A lease and accounting management API built for Karmachari Sanchaya Kosh (EPF)."
+category: "prixa"
+order: 4 
 ---
 
+import image from "../../../public/assets/lease-logo.png";
+export { image };
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
-export const { image, description } = frontmatter;
+export const { description } = frontmatter;
 
 <BaseLayout title="Lease Management | Projects" image={image} description={description}>
   <section class="max-w-3xl mx-auto py-12">

@@ -1,104 +1,60 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import fitnessSpark from "../../public/assets/fitness-spark.png";
-import cody from "../../public/assets/cody.png"
-import bytewalk from "../../public/assets/bytewalk.png"
-import chamber from "../../public/assets/chamber.png"
-import lease from "../../public/assets/lease-logo.png"
-import lspark from "../../public/assets/lspark.png"
-import pomelo from "../../public/assets/pomelo.png"
-import sosec from "../../public/assets/sosec-logo.png"
-import thirdfactor from "../../public/assets/thirdfactor.png"
-import tingting from "../../public/assets/tingting-logo.png"
+import type { ProjectFrontmatter } from "../types/project.ts";
+
+const modules = import.meta.glob("./projects/*.mdx", { eager: true });
+
+const projects: ProjectFrontmatter[] = Object.entries(modules)
+  .map(([path, mod]: any) => {
+    const slug = path.split("/").pop().replace(".mdx", "");
+    return {
+      ...mod.frontmatter,
+      image: mod.image,
+      url: `/projects/${slug}`,
+    };
+  })
+  .sort((a, b) => (b.order ?? 0) - (a.order ?? 0));
+
+const categoryOrder = ["personal", "prixa", "client", "other"]; 
+
+// Extract unique categories and sort according to custom order
+const categories = [...new Set(projects.map((p) => p.category))]
+  .sort((a, b) => {
+    const indexA = categoryOrder.indexOf(a);
+    const indexB = categoryOrder.indexOf(b);
+    // If not in categoryOrder, put at the end
+    return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
+  });
 ---
 
-<BaseLayout title="Projects | Akal Man Nakarmi" url="https://akal.com.np/projects" description="A curated collection of my web development work, featuring full-stack applications, automation tools, dashboards, and CMS platforms built with Django, FastAPI, React, Flutter, PostgreSQL, and more. Explore personal projects and real-world solutions I’ve designed and developed.">
+
+<BaseLayout title="Projects | Akal Man Nakarmi" description="A curated collection of my web development work, featuring full-stack applications, automation tools, dashboards, and CMS platforms built with Django, FastAPI, React, Flutter, PostgreSQL, and more. Explore personal projects and real-world solutions I’ve designed and developed.">
   <section class="max-w-5xl mx-auto py-16 px-4 sm:px-8">
+
     <h1 class="text-4xl font-heading text-pandaRed mb-6 text-center">Projects</h1>
+
     <p class="text-lg text-center text-pandaBrown mb-12 max-w-3xl mx-auto">
       A collection of things I’ve built, tweaked, and learned from — spanning web apps, automation scripts, and riced setups.
     </p>
-    <!-- Personal Projects -->
-    <h2 class="text-2xl font-heading text-pandaRed mb-4">Personal Projects</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-      <ProjectCard
-        title="Fitness Spark"
-        tech="FastAPI, MongoDB, React, Next.js"
-        description="A meal planning and recipe discovery web app built for my BCA 6th semester project."
-        image={fitnessSpark}
-        link="/projects/fitness-spark"
-      />
-      <ProjectCard
-        title="Cody"
-        tech="Flask, JSON"
-        description="A computer science-themed Jeopardy-style quiz game."
-        image={cody}
-        link="/projects/cody"
-      />
-      <!-- Add more personal projects here -->
-    </div>
-    
-    <!-- Prixa Projects -->
-    <h2 class="text-2xl font-heading text-pandaRed mb-4">Prixa Projects</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-      <ProjectCard
-        title="TingTing"
-        tech="Django, DRF, Celery, Redis, Next.js, React, TanStack Query"
-        description="A telemarketing platform using text-to-voice for Nepali language communication."
-        image={tingting}
-        link="/projects/tingting"
-      />
-      <ProjectCard
-        title="ThirdFactor"
-        tech="Django, Templates, Chart.js"
-        description="A dashboard for visualizing KYC verification data for Khalti users."
-        image={thirdfactor}
-        link="/projects/thirdfactor"
-      />
-      <ProjectCard
-        title="Sosec HRM"
-        tech="Django, DRF, PostgreSQL, Flutter"
-        description="An extended HRM platform for SOSEC Nepal with added modules like Travel and Timesheets."
-        image={sosec}
-        link="/projects/sosec-hrm"
-      />
-      <ProjectCard
-        title="Pomelo HRM"
-        tech="Django, DRF, Celery, Redis, PostgreSQL, Flutter"
-        description="A multi-tenant HR management system for employee data, attendance, and leave tracking."
-        image={pomelo}
-        link="/projects/pomelo-hrm"
-      />
-      <ProjectCard
-        title="Lease Management"
-        tech="Django REST Framework, PostgreSQL, Oracle"
-        description="A lease and accounting management API built for Karmachari Sanchaya Kosh (EPF)."
-        image={lease}
-        link="/projects/lease-management"
-      />
-      <ProjectCard
-        title="Nepal Chamber of Commerce"
-        tech="Django, Templates, PostgreSQL, CKEditor"
-        description="A CMS platform for managing chambers, executives, and member organizations."
-        image={chamber}
-        link="/projects/nepal-chamber"
-      />
-      <ProjectCard
-        title="Bytewalk"
-        tech="Django, Templates, CKEditor, Postgres"
-        description="A CMS website built for a software studio, crafted with Django templates, CKEditor and Postgres"
-        image={bytewalk}
-        link="/projects/bytewalk"
-      />
-      <ProjectCard
-        title="L-Spark Fire and Safety"
-        tech="Django, Templates, PostgreSQL"
-        description="A CMS-driven corporate site for a fire protection and safety solutions company."
-        image={lspark}
-        link="/projects/l-spark"
-      />
-    </div>
+
+    {categories.map((cat) => {
+      const catProjects = projects.filter((p) => p.category === cat);
+
+      return (
+        <section>
+          <h2 class="text-2xl font-heading text-pandaRed mb-4">
+            {cat.charAt(0).toUpperCase() + cat.slice(1)} Projects
+          </h2>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {catProjects.map((proj) => (
+              <ProjectCard {...proj} link={proj.url} />
+            ))}
+          </div>
+        </section>
+      );
+    })}
   </section>
 </BaseLayout>
 

@@ -1,12 +1,17 @@
 ---
 title: "Cody"
 tech: "Flask, JSON"
-image: "/assets/cody.png"
 description: "A computer science-themed Jeopardy-style quiz game."
+category: "personal"
+order: 3 
 ---
 
+import image from "../../../public/assets/cody.png";
+export { image };
+
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
-export const { image, description } = frontmatter;
+export const { description } = frontmatter;
 
 <BaseLayout title="Cody | Projects" image={image} description={description}>
   <section class="max-w-3xl mx-auto py-12">

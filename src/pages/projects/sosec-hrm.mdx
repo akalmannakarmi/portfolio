@@ -1,12 +1,16 @@
 ---
 title: "Sosec HRM"
 tech: "Django, DRF, PostgreSQL, Flutter"
-image: "/assets/sosec-logo.png"
 description: "An extended HRM platform for SOSEC Nepal with added modules like Travel and Timesheets."
+category: "prixa"
+order: 7 
 ---
 
+import image from "../../../public/assets/sosec-logo.png";
+export { image };
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
-export const { image, description } = frontmatter;
+export const { description } = frontmatter;
 
 <BaseLayout title="Sosec HRM | Projects" image={image} description={description}>
   <section class="max-w-3xl mx-auto py-12">

@@ -1,12 +1,16 @@
 ---
 title: "Fitness Spark"
 tech: "FastAPI, MongoDB, React, Next.js"
-image: "/assets/fitness-spark.png"
 description: "A meal planning and recipe discovery web app built for my BCA 6th semester project."
+category: "personal"
+order: 4 
 ---
 
+import image from "../../../public/assets/fitness-spark.png";
+export { image };
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
-export const { image, description } = frontmatter;
+export const { description } = frontmatter;
 
 <BaseLayout title="Fitness Spark | Projects" image={image} description={description}>
   <section class="max-w-3xl mx-auto py-12">

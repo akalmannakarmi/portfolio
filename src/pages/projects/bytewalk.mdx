@@ -1,12 +1,17 @@
 ---
 title: "Bytewalk"
 tech: "Django, Templates, CKEditor, Postgres"
-image: "/assets/bytewalk.png"
 description: "A CMS website built for a software studio, crafted with Django templates and CKEditor."
+category: "prixa"
+order: 2 
 ---
 
+import image from "../../../public/assets/bytewalk.png";
+export { image };
+
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
-export const { image, description } = frontmatter;
+export const { description } = frontmatter;
 
 <BaseLayout title="Bytewalk | Projects" image={image} description={description}>
   <section class="max-w-3xl mx-auto py-12">
