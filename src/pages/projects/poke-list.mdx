@@ -1,0 +1,39 @@
+---
+title: "Poke List"
+tech: "Python, FastAPI, SQLAlchemy, PostgreSQL, asyncpg"
+description: "A FastAPI-based Pokémon search app using data from the PokeAPI."
+category: "personal"
+order: 4
+---
+
+import image from "../../../public/assets/poke-list.png";
+export { image };
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { description } = frontmatter;
+
+<BaseLayout title="Poke List | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Poke List</h1>
+    <p class="text-pandaBrown mb-6">
+      Poke List is a Python project built with FastAPI that lets users search for Pokémon by name and type. It integrates with the PokeAPI to fetch Pokémon data and uses PostgreSQL with SQLAlchemy 2.0 syntax for efficient asynchronous database operations.
+    </p>
+
+    <ul class="list-disc list-inside text-pandaBrown/90 mb-6">
+      <li>🔎 Search Pokémon by name or type using live data from PokeAPI</li>
+      <li>⚡ Built with FastAPI for high-performance async requests</li>
+      <li>🗃️ Uses PostgreSQL with asyncpg and SQLAlchemy 2.0 syntax</li>
+      <li>🧩 Clean modular structure for easy extension and maintenance</li>
+      <li>💻 Demonstrates modern Python backend practices</li>
+    </ul>
+
+    <p class="text-pandaBrown">
+      This project was a great opportunity to dive into asynchronous Python programming and explore FastAPI’s power with PostgreSQL for building fast, real-world APIs.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://poke-list.akal.com.np" target="_blank">Visit Poke List</a><br/>
+      💾 <a class="text-pandaRed underline" href="https://github.com/akalmannakarmi/poke-list" target="_blank">View Repository</a>
+    </p>
+  </section>
+</BaseLayout>
