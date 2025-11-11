@@ -1,0 +1,41 @@
+---
+title: "Universal Data Hub"
+tech: "Python, Flask, SQLite3, SQLAlchemy"
+description: "A dynamic data collection and sharing platform where users control the visibility of their submitted data."
+category: "personal"
+order: 6
+---
+
+import image from "../../../public/assets/u-data-hub.png";
+export { image };
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { description } = frontmatter;
+
+<BaseLayout title="Universal Data Hub | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Universal Data Hub</h1>
+    <p class="text-pandaBrown mb-6">
+      Universal Data Hub is a BCA 4<sup>th</sup>-semester project built with Flask that provides a flexible data management platform. 
+      The admin can dynamically create forms, and users can fill them out while choosing how their data is shared — publicly, anonymously, or privately.
+      The goal of this project is to build a centralized storage hub where users retain control over who can access or reuse their data.
+    </p>
+
+    <ul class="list-disc list-inside text-pandaBrown/90 mb-6">
+      <li>🧩 Admin panel to create and manage dynamic forms</li>
+      <li>📝 Users can submit data with configurable privacy options</li>
+      <li>🔒 Supports public, anonymous, or private data sharing modes</li>
+      <li>📊 Centralized data hub for cross-application access</li>
+      <li>⚙️ Built with Flask, SQLite3, and SQLAlchemy</li>
+      <li>🎓 Developed as part of a BCA academic project</li>
+    </ul>
+
+    <p class="text-pandaBrown">
+      This project explores the idea of user-controlled data sharing, allowing flexible access rules and building a foundation for interoperable, privacy-aware applications.
+    </p>
+
+    <p class="mt-4">
+      💾 <a class="text-pandaRed underline" href="https://github.com/akalmannakarmi/u-data-hub" target="_blank">View Repository</a>
+    </p>
+  </section>
+</BaseLayout>
