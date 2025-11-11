@@ -1,0 +1,39 @@
+---
+title: "Safe Storage"
+tech: "Rust"
+description: "A command-line tool for encrypting, compressing, and securely managing file contents."
+category: "personal"
+order: 3
+---
+
+import image from "../../../public/assets/safe-storage.png";
+export { image };
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { description } = frontmatter;
+
+<BaseLayout title="Safe Storage | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Safe Storage</h1>
+    <p class="text-pandaBrown mb-6">
+      Safe Storage is a Rust-based command-line tool that helps securely handle file data through encryption and compression. 
+      It supports multiple modes to read, write, append, search, and output encrypted file contents, ensuring safe and efficient storage.
+    </p>
+
+    <ul class="list-disc list-inside text-pandaBrown/90 mb-6">
+      <li>🔐 Encrypts and compresses files for secure storage</li>
+      <li>📁 Supports multiple modes: read, write, append, search, and output</li>
+      <li>⚙️ Built in Rust with focus on speed, safety, and reliability</li>
+      <li>🧩 Modular architecture using the <code>modes</code> module</li>
+      <li>💻 CLI usage example: <code>cargo run text.txt Mypassword -[r/w/a/s/o]</code></li>
+    </ul>
+
+    <p class="text-pandaBrown">
+      This project was a fun exploration into Rust’s performance and safety features while learning about encryption and file compression mechanisms.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://github.com/akalmannakarmi/safe-storage" target="_blank">View Repository</a>
+    </p>
+  </section>
+</BaseLayout>
