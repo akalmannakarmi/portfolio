@@ -1,0 +1,37 @@
+---
+title: "Tkinter Calculator"
+tech: "Python, Tkinter"
+description: "A simple GUI calculator built with Python's Tkinter."
+category: "personal"
+order: 1
+---
+
+import image from "../../../public/assets/tk-calculator.png";
+export { image };
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { description } = frontmatter;
+
+<BaseLayout title="Tkinter Calculator | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Tkinter Calculator</h1>
+    <p class="text-pandaBrown mb-6">
+      A simple calculator built using Python's Tkinter library. It supports basic arithmetic operations with an intuitive graphical interface.
+    </p>
+
+    <ul class="list-disc list-inside text-pandaBrown/90 mb-6">
+      <li>➕ Performs addition, subtraction, multiplication, and division</li>
+      <li>🧮 User-friendly GUI with Tkinter buttons and display</li>
+      <li>💻 Lightweight and easy to extend</li>
+      <li>📂 Fully implemented in Python for quick testing and learning</li>
+    </ul>
+
+    <p class="text-pandaBrown">
+      This project was created to practice GUI programming in Python and to understand Tkinter widget management.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://github.com/akalmannakarmi/py-tkCalculator" target="_blank">View Repository</a>
+    </p>
+  </section>
+</BaseLayout>
