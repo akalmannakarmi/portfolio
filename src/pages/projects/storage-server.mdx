@@ -1,0 +1,39 @@
+---
+title: "Storage Server"
+tech: "Python, Flask, SQLite, JSON"
+description: "A lightweight personal Flask-based storage server that functions as a mini NAS."
+category: "personal"
+order: 5
+---
+
+import image from "../../../public/assets/storage-server.png";
+export { image };
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { description } = frontmatter;
+
+<BaseLayout title="Storage Server | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Storage Server</h1>
+    <p class="text-pandaBrown mb-6">
+      Storage Server is a Flask-based application that acts as a lightweight personal file server. It allows uploading, organizing, listing, and downloading files through a simple web interface — essentially working like a mini NAS (Network-Attached Storage) solution for personal use.
+    </p>
+
+    <ul class="list-disc list-inside text-pandaBrown/90 mb-6">
+      <li>📂 Upload and manage files directly from the browser</li>
+      <li>🌳 Displays files and directories in a tree structure</li>
+      <li>🖼️ Supports inline viewing of images and media</li>
+      <li>💾 Stores metadata in SQLite for quick lookups</li>
+      <li>⚙️ Built with Flask, using JSON for lightweight configuration</li>
+      <li>🖥️ Runs locally as a private NAS on a secondary device</li>
+    </ul>
+
+    <p class="text-pandaBrown">
+      This project started as a personal utility to manage files between devices and evolved into a flexible self-hosted storage app using Flask and SQLite.
+    </p>
+
+    <p class="mt-4">
+      💾 <a class="text-pandaRed underline" href="https://github.com/akalmannakarmi/storage-server" target="_blank">View Repository</a>
+    </p>
+  </section>
+</BaseLayout>
