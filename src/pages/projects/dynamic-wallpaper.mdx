@@ -1,0 +1,36 @@
+---
+title: "Dynamic Wallpaper"
+tech: "C++, Windows API"
+description: "A C++ project that creates dynamic wallpapers by setting video frames as wallpapers in sequence."
+category: "personal"
+order: 2
+---
+
+import image from "../../../public/assets/dynamic-wallpaper.png";
+export { image };
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { description } = frontmatter;
+
+<BaseLayout title="Dynamic Wallpaper | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Dynamic Wallpaper</h1>
+    <p class="text-pandaBrown mb-6">
+      Dynamic Wallpaper is a C++ project that takes a video file, extracts each frame as an image, and sequentially sets those frames as the desktop wallpaper, creating a live animated wallpaper effect for Windows.
+    </p>
+
+    <ul class="list-disc list-inside text-pandaBrown/90 mb-6">
+      <li>🎞️ Converts a video into a sequence of frame images</li>
+      <li>🖼️ Dynamically updates the desktop wallpaper using Windows API calls</li>
+      <li>💡 Fun experiment combining C++ programming and Windows system integration</li>
+    </ul>
+
+    <p class="text-pandaBrown">
+      This was a fun project to explore C++ and the Windows API, learning about system-level programming and creative desktop automation.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://github.com/akalmannakarmi/dynamic-wallpaper" target="_blank">View Repository</a>
+    </p>
+  </section>
+</BaseLayout>
