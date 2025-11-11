@@ -30,7 +30,7 @@ const categories = [...new Set(projects.map((p) => p.category))]
 
 
 <BaseLayout title="Projects | Akal Man Nakarmi" description="A curated collection of my web development work, featuring full-stack applications, automation tools, dashboards, and CMS platforms built with Django, FastAPI, React, Flutter, PostgreSQL, and more. Explore personal projects and real-world solutions I’ve designed and developed.">
-  <section class="max-w-5xl mx-auto py-16 px-4 sm:px-8">
+  <section class="xl:max-w-7xl max-w-5xl mx-auto py-16 px-4 sm:px-8">
 
     <h1 class="text-4xl font-heading text-pandaRed mb-6 text-center">Projects</h1>
 
@@ -47,7 +47,7 @@ const categories = [...new Set(projects.map((p) => p.category))]
             {cat.charAt(0).toUpperCase() + cat.slice(1)} Projects
           </h2>
 
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
             {catProjects.map((proj) => (
               <ProjectCard {...proj} link={proj.url} />
             ))}
