@@ -1,0 +1,38 @@
+---
+title: "Auto Clipper"
+tech: "Flask, SQLAlchemy, SQLite, JSON, Google Auth, Tkinter, Requests, pytube, yt-dlp"
+description: "A two-part tool for automated YouTube video creation from clips."
+category: "personal"
+order: 103
+---
+
+import image from "../../../public/assets/auto-clipper.png";
+export { image };
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { description } = frontmatter;
+
+<BaseLayout title="Auto Cliper | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Auto Cliper</h1>
+    <p class="text-pandaBrown mb-6">
+      Auto Cliper is a two-part application consisting of a Controller and a Worker. The Controller is a Flask app where users can add clips and initiate video creation. The Worker listens for tasks from the Controller, downloads the videos, cuts and joins clips, and uploads the final video to the specified YouTube channel with timestamps and source info.
+    </p>
+
+    <ul class="list-disc list-inside text-pandaBrown/90 mb-6">
+      <li>🖥️ Controller: Flask app with SQLAlchemy, SQLite, JSON, and Google Auth integration</li>
+      <li>⚙️ Worker: Tkinter GUI, uses Requests, pytube, and yt-dlp for automated video processing</li>
+      <li>🎬 Automates downloading, clipping, joining, and uploading videos to YouTube</li>
+      <li>🕒 Maintains timestamps and source info for each clip</li>
+      <li>🔐 Secure authentication with Google OAuth</li>
+    </ul>
+
+    <p class="text-pandaBrown">
+      This project demonstrates automation, scalable task management, and integration with YouTube APIs, combining GUI, backend, and worker processes.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://auto-clipper.akal.com.np" target="_blank">Visit Auto Clipper</a>
+    </p>
+  </section>
+</BaseLayout>
