@@ -1,0 +1,42 @@
+---
+title: "Finity Store"
+tech: "Python, Django, PostgreSQL, Tailwind, HTMX, eSewa, Khalti"
+description: "An e-commerce auction platform built with Django, featuring live auctions, buy-now options, and payment integrations."
+category: "personal"
+order: 101
+---
+
+import image from "../../../public/assets/finity-store.png";
+export { image };
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export const { description } = frontmatter;
+
+<BaseLayout title="Finity Store | Projects" image={image} description={description}>
+  <section class="max-w-3xl mx-auto py-12">
+    <h1 class="text-4xl font-heading text-pandaRed mb-4">Finity Store</h1>
+    <p class="text-pandaBrown mb-6">
+      Finity Store is a Django-based e-commerce platform developed as part of a BCA 6<sup>th</sup>-semester project for the E-commerce course. 
+      It allows administrators to create auctions — including both Buy It Now (BIN) and timed auctions — and integrates payments using eSewa and Khalti.
+      The project combines a modern frontend with Tailwind CSS and HTMX for a seamless, interactive experience.
+    </p>
+
+    <ul class="list-disc list-inside text-pandaBrown/90 mb-6">
+      <li>🛒 Admin can create auctions with BIN or timed modes</li>
+      <li>💰 Integrated with eSewa and Khalti for payments</li>
+      <li>⚡ Built with Django, PostgreSQL, and HTMX for dynamic updates</li>
+      <li>🎨 Tailwind-powered responsive frontend design</li>
+      <li>📦 Features include item listings, bidding, and checkout flow</li>
+      <li>🎓 Created as a BCA 6<sup>th</sup>-semester project for E-commerce</li>
+    </ul>
+
+    <p class="text-pandaBrown">
+      This project showcases a complete e-commerce workflow — from auction management to secure payment processing — built with modern Django and frontend tools.
+    </p>
+
+    <p class="mt-4">
+      🔗 <a class="text-pandaRed underline" href="https://finity-store.akal.com.np" target="_blank">Visit Finity Store</a><br/>
+      💾 <a class="text-pandaRed underline" href="https://github.com/akalmannakarmi/finity-store" target="_blank">View Repository</a>
+    </p>
+  </section>
+</BaseLayout>
